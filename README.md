@@ -1,1 +1,2 @@
-# Parcial1Frontend-BernardoAlvarez
+# Parcial1Frontend
+Integrante: Bernardo Alvarez Ciro
