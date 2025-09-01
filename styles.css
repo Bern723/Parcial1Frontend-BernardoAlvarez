@@ -1,0 +1,183 @@
+/* ========== Reset básico ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ========== Header y navegación ========== */
+header {
+  background-color: #222;
+  color: white;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul li a {
+  color: white;
+}
+
+nav form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* ========== Portada (Hero) ========== */
+.portada {
+  background: url("assets/hero.jpg") center/cover no-repeat;
+  color: black;
+  text-align: center;
+  padding: 5rem 1rem;
+}
+
+.portada h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.portada p {
+  font-size: 1.2rem;
+}
+
+/* ========== Productos destacados ========== */
+.featured-products,
+.productos-destacados {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+.featured-products article {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.featured-products img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.featured-products button {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #222;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.featured-products button:hover {
+  background: #444;
+}
+
+/* ========== Catálogo ========== */
+.catalog,
+.catalogo {
+  display: grid;
+  gap: 1rem;
+  padding: 2rem 1rem;
+}
+
+.catalog article,
+.catalogo article {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.catalog img,
+.catalogo img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* Producto destacado más grande */
+.catalog .big,
+.catalogo .big {
+  grid-column: span 2;
+}
+
+/* ========== Footer ========== */
+footer {
+  background: #222;
+  color: white;
+  padding: 2rem 1rem;
+}
+
+.footer-info {
+  display: grid;
+  gap: 1rem;
+}
+
+.footer-info article h4 {
+  margin-bottom: 0.5rem;
+}
+
+.social {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.social ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* ========== Responsivo ========== */
+/* Para pantallas grandes (desktop) */
+@media (min-width: 768px) {
+  nav ul {
+    gap: 2rem;
+  }
+
+  .featured-products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .catalog {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-info {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
